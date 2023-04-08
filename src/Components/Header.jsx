@@ -6,7 +6,7 @@ const Header = () => {
   <>
     <div className="sticky flex bg-white mx-5 border-b-2 border-b-slate-500 font-Poppins py-8 ">
     <div className='flex items-center justify-center gap-28 text-2xl w-full h-full content-end tracking-widest'> 
-      <Link to='/Beranda' className='flex'>
+      <Link to='/' className='flex'>
           BERANDA
         </Link>
       <Link to='/Portofolio' className='flex'>

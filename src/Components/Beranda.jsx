@@ -2,8 +2,13 @@ import React from 'react'
 import Foto from '../Assets/Foto.jpg'
 import Cards from './cards'
 import Header from './Header'
+import { useState } from "react";
+
 
 const Beranda = () => {
+
+  const [ShowMore, setShowMore] = useState (false);
+
   return (
     <>
     <Header/>
@@ -26,11 +31,25 @@ const Beranda = () => {
                 <Cards/>
             </div>
             <div className='flex px-24 items-center basis-1/6 justify-center py-5'>
-                <button className='flex border-4 border-slate-300 py-3 px-10 text-purple-700 text-lg'>
+                <button className='flex border-4 border-slate-300 py-3 px-10 text-purple-700 text-lg' onClick={()=> setShowMore(true)}>
                     Lebih Banyak
                 </button>  
             </div>
       </div>
+    {ShowMore ? (
+      <>
+      <div className='grid grid-cols-3 gap-4 px-24 basis-2/6 '>
+          <Cards/>
+          <Cards/>
+          <Cards/>
+          <Cards/>
+          <Cards/>
+          <Cards/>
+          <Cards/>
+      </div>
+      </>
+    ) : null}
+
     </div>
     </>
 
